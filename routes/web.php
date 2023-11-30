@@ -1,11 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\EncryptDecryptController;
-use App\Http\Controllers\InboxController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SentController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,13 +29,13 @@ Route::get('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
 
 // home
-Route::get('/home', [HomeController::class, 'home']);
+Route::get('/home', [UserController::class, 'home']);
 
 // encrypt
-Route::get('/encryptdata', [EncryptDecryptController::class, 'encrypt']);
+Route::get('/encryptdata', [DataController::class, 'encrypt']);
 
 // decrypt
-Route::get('/decryptdata', [EncryptDecryptController::class, 'decrypt']);
+Route::get('/decryptdata', [DataController::class, 'decrypt']);
 
 // request
 Route::get('/request', [RequestController::class, 'request']);
@@ -48,4 +47,4 @@ Route::get('/datarequested', [RequestController::class, 'datarequested']);
 Route::get('/sent', [SentController::class, 'sent']);
 
 // inbox
-Route::get('/inbox', [InboxController::class, 'inbox']);
+Route::get('/inbox', [UserController::class, 'inbox']);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EncryptDecryptController extends Controller
+class DataController extends Controller
 {
     public function encrypt()
     {
