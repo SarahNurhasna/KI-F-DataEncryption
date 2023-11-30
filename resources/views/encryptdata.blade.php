@@ -1,7 +1,7 @@
-@extends('layout.main')
+@extends('main')
 
 @section('container')
-    <h1>Your Encrypted Profile</h1>
+    <h2>Your Encrypted Profile</h2>
     <table class="table table-striped table-hover">
         <tr>
             <td class="table-light">
@@ -17,9 +17,6 @@
                 <h4>Date of Birth</h4>  
             </td>
             <td class="table-light">
-                <h4>Age</h4>  
-            </td>
-            <td class="table-light">
                 <h4>Gender</h4>  
             </td>
             <td class="table-light">
@@ -28,30 +25,27 @@
         </tr>
         <tr>
             <td class="table-light">
-                <h4>sindfy8y</h4>  
+                <p>decrypt name</p>  
             </td>
             <td class="table-light">
-                <h4>fnqiy</h4>  
+                <p>decrypt email</p>  
             </td>
             <td class="table-light">
-                <h4>sfoeuqwm</h4>  
+                <p>decrypt phone</p>  
             </td>
             <td class="table-light">
-                <h4>97rncewjif</h4>  
+                <p>decrypt date</p>  
             </td>
             <td class="table-light">
-                <h4>jkbcksd</h4>  
+                <p>decrypt gende</p>  
             </td>
             <td class="table-light">
-                <h4>5g4vter</h4>  
-            </td>
-            <td class="table-light">
-                <h4>3t4vewrte</h4>  
+                <p>decrypt address</p>  
             </td>
         </tr>
     </table>
 
-    <h1>Your Encrypted Data</h1>
+    <h2>Your Encrypted Data</h2>
     <table class="table table-striped table-hover">
         <tr>
             <td class="table-light">
@@ -63,10 +57,10 @@
         </tr>
         <tr>
             <td class="table-light">
-                <h4>2345678.jpg</h4>  
+                <p>2345678.jpg</p>  
             </td>
             <td class="table-light">
-                <a class="btn btn-primary" href="#" role="button">Download</a>
+                <a class="btn btn-rounded" href="#" role="button">Download</a>
             </td>
         </tr>
     </table>

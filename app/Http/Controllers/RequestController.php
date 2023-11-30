@@ -12,4 +12,11 @@ class RequestController extends Controller
             "title" => "Request"
         ]);
     }
+
+    public function datarequested()
+    {
+        return view('datarequested', [
+            "title" => "Data Requested"
+        ]);
+    }
 }

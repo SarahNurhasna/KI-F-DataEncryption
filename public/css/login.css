@@ -1,44 +1,35 @@
 @font-face {
-    font-family: "LoveSong";
-    src: url("../font/Mf Love Song.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "CocogooseProLight";
-    src: url("../font/Cocogoose Pro Light-trial.ttf") format("truetype");
+  font-family: 'LoveSong';
+  src: url('../font/Mf Love Song.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
     margin: 0;
     color: #333;
-    background: rgb(255, 165, 204);
-    background: radial-gradient(
-        circle,
-        rgba(255, 165, 204, 1) 0%,
-        rgba(120, 182, 255, 1) 100%
-    );
-    font-family: "Poppins", sans-serif;
+    background: rgb(255,165,204);
+    background: radial-gradient(circle, rgba(255,165,204,1) 0%, rgba(120,182,255,1) 100%);
+    font-family: 'Raleway', sans-serif !important;
     align-items: center;
     font-size: 2.3vmin !important;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: 5vmin;
     margin: 0 0 30px;
     color: #102339;
-    font-family: "LoveSong", sans-serif;
-}
+    font-family: 'LoveSong', sans-serif;
+  }
 
-.container {
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vmin;
-}
-
-.form-container {
+  }
+  
+  .form-container {
     background: #feffff;
     border-radius: 15px;
     justify-content: center;
@@ -46,81 +37,86 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 350px;
     text-align: center;
-}
-
-.login-form h2 {
+  }
+  
+  .login-form h2 {
     margin: 0 0 20px;
     align-items: center;
     color: #333;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     margin: 10px 20px 10px 20px;
     display: flex;
     flex-direction: column;
-}
-
-label {
+    
+  }
+  
+  label {
     display: flex;
     width: 300px;
     color: #333;
     text-align: left;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-family: "CocogooseProLight", sans-serif;
-}
-
-input {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600;
+  }
+  
+  input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 30px;
-}
-
-button {
-    margin: 10px !important;
-    width: 60%; /* Set width to 100% */
-    padding: 10px;
-    background: #5c9be3 !important;
-    color: #ffffff !important;
-    border: none;
-    cursor: pointer;
-}
-.btn-rounded {
+  }
+  
+  button {
+      margin: 10px !important;
+      width: 60%; /* Set width to 100% */
+      padding: 10px;
+      background: #5c9be3 !important;
+      color: #ffffff !important;
+      border: none;
+      cursor: pointer;
+  }
+  .btn-rounded {
     border-radius: 50px !important; /* Adjust this value based on your preference */
-    font-family: "CocogooseProLight", sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 2.3vmin !important;
-}
+  }
 
-button:hover {
+
+  
+  button:hover {
     background-color: #5a86b7 !important;
-}
-
-p {
+  }
+  
+  p {
     margin: 20px 0 0;
-    font-family: "CocogooseProLight", sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 2vmin;
-}
-
-a {
+  }
+  
+  a {
     color: #5c9be3 !important;
     text-decoration: none;
-}
-
-/* Media queries untuk tampilan responsif */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Media queries untuk tampilan responsif */
+  @media screen and (max-width: 768px) {
     .form-container {
-        width: 80%;
+      width: 80%;
     }
-}
-
-@media screen and (max-width: 480px) {
+  }
+  
+  @media screen and (max-width: 480px) {
     .form-container {
-        width: 100%;
-        padding: 10px;
+      width: 100%;
+      padding: 10px;
     }
-
+  
     .login-form h2 {
-        font-size: 20px;
+      font-size: 20px;
     }
-}
+  }
+  

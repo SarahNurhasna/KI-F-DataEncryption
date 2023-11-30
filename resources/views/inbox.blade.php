@@ -1,5 +1,5 @@
-@extends('layout.main')
+@extends('main')
 
 @section('container')
-    <h1>INBOX</h1>
+No inbox
 @endsection

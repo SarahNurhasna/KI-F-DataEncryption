@@ -41,6 +41,9 @@ Route::get('/decryptdata', [EncryptDecryptController::class, 'decrypt']);
 // request
 Route::get('/request', [RequestController::class, 'request']);
 
+// data requested
+Route::get('/datarequested', [RequestController::class, 'datarequested']);
+
 // sent
 Route::get('/sent', [SentController::class, 'sent']);
 

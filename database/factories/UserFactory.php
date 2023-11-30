@@ -28,7 +28,13 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
         ];
     }
-
+    name
+    password
+    email
+    phone
+    date of birth
+    gender
+    address
     /**
      * Indicate that the model's email address should be unverified.
      */
