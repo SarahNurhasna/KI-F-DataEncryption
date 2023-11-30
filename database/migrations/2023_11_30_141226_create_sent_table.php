@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sent', function (Blueprint $table) {
-            $table->uuid('sent_id');
+            $table->uuid('sent_id')->primary();
             $table->text('symkey');
 
             // add request_id foreign key reference to request table
