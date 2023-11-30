@@ -25,6 +25,7 @@
         </tr>
         <tr>
             <td class="table-light">
+<<<<<<< HEAD
                 <p>decrypt name</p>  
             </td>
             <td class="table-light">
@@ -41,6 +42,24 @@
             </td>
             <td class="table-light">
                 <p>decrypt address</p>  
+=======
+                <p>{{$encryptedName}}</p>  
+            </td>
+            <td class="table-light">
+                <p>{{$encryptedEmail}}</p>  
+            </td>
+            <td class="table-light">
+                <p>{{$encryptedPhone}}</p>  
+            </td>
+            <td class="table-light">
+                <p>{{$encryptedDob}}</p>  
+            </td>
+            <td class="table-light">
+                <p>{{$encryptedGender}}</p>  
+            </td>
+            <td class="table-light">
+                <p>{{$encryptedAddress}}</p>  
+>>>>>>> 65da54a3456d3f3088fadf036f0d57d5d7e7a7a5
             </td>
         </tr>
     </table>

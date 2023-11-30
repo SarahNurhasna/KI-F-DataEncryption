@@ -31,9 +31,12 @@
                                 <a class="nav-link" href="request">Request</a>
                             </li>
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link" href="sent">Sent</a>
                             </li>
                             <li class="nav-item">
+=======
+>>>>>>> 65da54a3456d3f3088fadf036f0d57d5d7e7a7a5
                                 <a class="nav-link" href="datarequested">Data Requested</a>
                             </li>
                             <li class="nav-item">
