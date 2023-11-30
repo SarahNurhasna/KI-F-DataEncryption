@@ -22,7 +22,7 @@
 <script>
 document.getElementById("send-button").addEventListener("submit", function (event) {
         // Mengarahkan pengguna ke halaman lain (ganti "dashboard.html" dengan halaman tujuan yang sesuai)
-        window.location.href = "requested";
+        window.location.href = "datarequested";
         });
 </script>
 @endsection

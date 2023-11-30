@@ -31,6 +31,9 @@
                                 <a class="nav-link" href="request">Request</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="datarequested">Data Requested</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="inbox">Inbox</a>
                             </li>
                             <li class="nav-item">
