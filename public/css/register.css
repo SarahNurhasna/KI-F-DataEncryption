@@ -1,26 +1,23 @@
 @font-face {
-    font-family: "LoveSong";
-    src: url("../font/Mf Love Song.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'LoveSong';
+  src: url('../font/Mf Love Song.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "CocogooseProLight";
-    src: url("../font/Cocogoose Pro Light-trial.ttf") format("truetype");
+  font-family: 'CocogooseProLight';
+  src: url('../font/Cocogoose Pro Light-trial.ttf') format('truetype');
 }
 
 body {
-    margin: 0;
     color: #333;
-    background: rgb(255, 165, 204);
-    background: radial-gradient(
-        circle,
-        rgba(255, 165, 204, 1) 0%,
-        rgba(120, 182, 255, 1) 100%
-    );
+    background: rgb(255,165,204);
+    background: radial-gradient(circle, rgba(255,165,204,1) 0%, rgba(120,182,255,1) 100%);
     font-family: "Poppins", sans-serif;
-    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 50px;
     font-size: 2.3vmin !important;
 }
 
@@ -28,29 +25,31 @@ h2 {
     font-size: 5vmin;
     margin: 0 0 30px;
     color: #102339;
-    font-family: "LoveSong", sans-serif;
+    font-family: 'LoveSong', sans-serif;
 }
 
 .container {
+    height: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vmin;
+    text-align: center;
+    
 }
 
 .form-container {
     background: #feffff;
     border-radius: 15px;
-    justify-content: center;
     padding: 35px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 350px;
+    width: 50%;
     text-align: center;
+    
 }
 
-.login-form h2 {
-    margin: 0 0 20px;
-    align-items: center;
+.register-form h2 {
+    margin: 20px 0 20px;
     color: #333;
 }
 
@@ -60,14 +59,23 @@ h2 {
     flex-direction: column;
 }
 
-label {
+
+.form-select{
+    width: 40% !important;
+    border: 1px solid #ccc;
+    border-radius: 50px !important;
     display: flex;
-    width: 300px;
+    font-family: 'CocogooseProLight', sans-serif;
+    font-size: 2vmin !important;
+}
+
+label {
+    width: 100%; /* Full width for labels */
     color: #333;
     text-align: left;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-family: "CocogooseProLight", sans-serif;
+    font-family: 'CocogooseProLight', sans-serif;
 }
 
 input {
@@ -78,17 +86,19 @@ input {
 }
 
 button {
-    margin: 10px !important;
-    width: 60%; /* Set width to 100% */
+    margin: 20px !important;
+    width: 50%; /* Set width to 60% */
     padding: 10px;
-    background: #5c9be3 !important;
-    color: #ffffff !important;
+    background: #5c9be3 !important;;
+    color: #feffff;
     border: none;
     cursor: pointer;
+    
 }
+
 .btn-rounded {
     border-radius: 50px !important; /* Adjust this value based on your preference */
-    font-family: "CocogooseProLight", sans-serif !important;
+    font-family: 'CocogooseProLight', sans-serif !important;
     font-size: 2.3vmin !important;
 }
 
@@ -98,13 +108,13 @@ button:hover {
 
 p {
     margin: 20px 0 0;
-    font-family: "CocogooseProLight", sans-serif;
-    font-size: 2vmin;
+    font-family: 'CocogooseProLight', sans-serif !important;
 }
 
 a {
-    color: #5c9be3 !important;
+    color: #5c9be3 !important;;
     text-decoration: none;
+    font-family: 'CocogooseProLight', sans-serif !important;
 }
 
 /* Media queries untuk tampilan responsif */

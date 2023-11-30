@@ -13,18 +13,56 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
+// login
 Route::get('/login', function () {
-    return view('login');
+    return view('login', [
+        "title" => "Login"
+    ]);
 });
 
+// register
 Route::get('/register', function () {
-    return view('register');
+    return view('register', [
+        "title" => "Register"
+    ]);
+});
+
+// dashboard
+Route::get('/home', function () {
+    return view('home', [
+        "name" => "Sarah",
+        "title" => "Home"
+    ]);
+});
+
+// encrypt
+Route::get('/encryptdata', function () {
+    return view('encryptdata', [
+        "title" => "Encrypted Data"
+    ]);
+});
+
+// decrypt
+Route::get('/decryptdata', function () {
+    return view('decryptdata', [
+        "title" => "Decrypted Data"
+    ]);
+});
+
+// request
+Route::get('/request', function () {
+    return view('request', [
+        "title" => "Request"
+    ]);
+});
+
+// sent
+Route::get('/sent', function () {
+    return view('sent', [
+        "title" => "Sent"
+    ]);
 });

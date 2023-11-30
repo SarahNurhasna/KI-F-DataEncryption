@@ -1,0 +1,11 @@
+/* Define the font face */
+@font-face {
+    font-family: "Home-Christmas";
+    src: url("../font/Home Christmas.otf") format("opentype");
+    /* Add other font properties if needed, e.g., font-weight, font-style */
+}
+
+/* Use the custom font in your styles */
+h1 .navbar-brand{
+    font-family: "Home-Christmas", sans-serif;
+}
