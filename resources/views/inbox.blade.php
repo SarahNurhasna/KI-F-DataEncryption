@@ -1,5 +1,6 @@
 @extends('main')
 
 @section('container')
-No inbox
+<h2>Inbox</h2>
+<p>No messages yet</p>
 @endsection
