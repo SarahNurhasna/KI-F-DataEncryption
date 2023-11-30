@@ -1,7 +1,7 @@
-@extends('layout.main')
+@extends('main')
 
 @section('container')
-    <h1>Your Decrypted Profile</h1>
+    <h2>Your Decrypted Profile</h2>
     <table class="table table-striped table-hover">
         <tr>
             <td class="table-light">
@@ -17,9 +17,6 @@
                 <h4>Date of Birth</h4>  
             </td>
             <td class="table-light">
-                <h4>Age</h4>  
-            </td>
-            <td class="table-light">
                 <h4>Gender</h4>  
             </td>
             <td class="table-light">
@@ -27,31 +24,28 @@
             </td>
         </tr>
         <tr>
-            <td class="table-light">
-                <h4>Sarah</h4>  
+        <td class="table-light">
+                <p>{{$decryptedName}}</p>  
             </td>
             <td class="table-light">
-                <h4>tes</h4>  
+                <p>{{$decryptedEmail}}</p>  
             </td>
             <td class="table-light">
-                <h4>098765432</h4>  
+                <p>{{$decryptedPhone}}</p>  
             </td>
             <td class="table-light">
-                <h4>20-20-20</h4>  
+                <p>{{$decryptedDob}}</p>  
             </td>
             <td class="table-light">
-                <h4>19</h4>  
+                <p>{{$decryptedGender}}</p>  
             </td>
             <td class="table-light">
-                <h4>Female</h4>  
-            </td>
-            <td class="table-light">
-                <h4>jalan jalan</h4>  
+                <p>{{$decryptedAddress}}</p>  
             </td>
         </tr>
     </table>
 
-    <h1>Your Decrypted Data</h1>
+    <h2>Your Decrypted Data</h2>
     <table class="table table-striped table-hover">
         <tr>
             <td class="table-light">
@@ -63,10 +57,10 @@
         </tr>
         <tr>
             <td class="table-light">
-                <h4>2345678.jpg</h4>  
+                <p>2345678.jpg</p>  
             </td>
             <td class="table-light">
-                <a class="btn btn-primary" href="#" role="button">Download</a>
+                <a class="btn btn-rounded" href="#" role="button">Download</a>
             </td>
         </tr>
     </table>

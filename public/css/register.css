@@ -5,16 +5,11 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'CocogooseProLight';
-  src: url('../font/Cocogoose Pro Light-trial.ttf') format('truetype');
-}
-
 body {
     color: #333;
     background: rgb(255,165,204);
     background: radial-gradient(circle, rgba(255,165,204,1) 0%, rgba(120,182,255,1) 100%);
-    font-family: "Poppins", sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     justify-content: center;
     display: flex;
     padding: 50px;
@@ -65,7 +60,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 50px !important;
     display: flex;
-    font-family: 'CocogooseProLight', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 2vmin !important;
 }
 
@@ -75,7 +70,8 @@ label {
     text-align: left;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-family: 'CocogooseProLight', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600;
 }
 
 input {
@@ -98,7 +94,7 @@ button {
 
 .btn-rounded {
     border-radius: 50px !important; /* Adjust this value based on your preference */
-    font-family: 'CocogooseProLight', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 2.3vmin !important;
 }
 
@@ -108,13 +104,13 @@ button:hover {
 
 p {
     margin: 20px 0 0;
-    font-family: 'CocogooseProLight', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 a {
     color: #5c9be3 !important;;
     text-decoration: none;
-    font-family: 'CocogooseProLight', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 /* Media queries untuk tampilan responsif */
