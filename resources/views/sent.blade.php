@@ -11,15 +11,15 @@
 
         <div class="form-group">
             <label for="passwordSender">Your Password</label></br>
-            <input type="password" id="age" required />
+            <input type="password" id="password" required />
         </div>
         <div class="form-group">
             <label for="emailReceiver">Email Receiver</label></br>
-            <input type="email" id="age" required />
+            <input type="email" id="email" required />
         </div>
         <div class="form-group">
             <label for="symmetrickey">Symmetric Key</label></br>
-            <input type="symmetrickey" id="age" required />
+            <input type="symmetrickey" id="symmetrickey" required />
         </div>
     </form>
 </div>

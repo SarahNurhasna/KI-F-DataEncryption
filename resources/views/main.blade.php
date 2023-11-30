@@ -19,28 +19,25 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="home">Home</a>
+                                <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="encryptdata">Encrypt Data</a>
+                                <a class="nav-link {{ ($title === "Encrypted Data") ? 'active' : '' }}" aria-current="page" href="encryptdata">Encrypt Data</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="decryptdata">Decrypt Data</a>
+                                <a class="nav-link {{ ($title === "Decrypted Data") ? 'active' : '' }}" href="decryptdata">Decrypt Data</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="request">Request</a>
+                                <a class="nav-link {{ ($title === 'Request') ? 'active' : '' }}" href="request">Request</a>
                             </li>
                             <li class="nav-item">
-<<<<<<< HEAD
-                                <a class="nav-link" href="sent">Sent</a>
+                                <a class="nav-link {{ ($title === 'Sent') ? 'active' : '' }}" href="sent">Sent</a>
                             </li>
                             <li class="nav-item">
-=======
->>>>>>> 65da54a3456d3f3088fadf036f0d57d5d7e7a7a5
-                                <a class="nav-link" href="datarequested">Data Requested</a>
+                                <a class="nav-link {{ ($title === 'Data Requested') ? 'active' : '' }}" href="datarequested">Data Requested</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="inbox">Inbox</a>
+                                <a class="nav-link {{ ($title === 'Inbox') ? 'active' : '' }}" href="inbox">Inbox</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="login">Logout</a>
