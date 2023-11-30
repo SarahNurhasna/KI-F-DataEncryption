@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->text('privatekey');
-            $table->text('publickey');
+        Schema::create('sent', function (Blueprint $table) {
+            $table->uuid('sent_id');
+            $table->text('symkey');
+
+            // add request_id foreign key reference to request table
+            $table->uuid('request_id');
+            $table->foreign('request_id')->references('id')->on('request')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('sent');
     }
 };
