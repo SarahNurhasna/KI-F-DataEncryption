@@ -31,32 +31,12 @@
         </div>
       </div>
     </div>
-    <script>
+    {{-- <script>
         // Menangani saat tombol login ditekan
         document.getElementById("login-button").addEventListener("click", function (event) {
         // Mengarahkan pengguna ke halaman lain (ganti "dashboard.html" dengan halaman tujuan yang sesuai)
-        window.location.href = "home";
+        window.location.href = "{{ route('user.home')}}";
         });
-
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert("Masukkan alamat email yang valid.");
-                event.preventDefault();
-                return;
-            }
-
-            if (password.length < 8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-                alert("Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya satu huruf dan satu angka.");
-                event.preventDefault();
-                return;
-            }
-
-        });
-    </script>
+    </script> --}}
   </body>
 </html>

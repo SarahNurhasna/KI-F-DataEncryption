@@ -34,7 +34,7 @@ Route::post('/register', [AuthController::class, 'storeUser'])->name('user.regis
 Route::get('/home/{userId}', [UserController::class, 'showhome'])->name('user.home');
 
 // encrypt
-Route::get('/encryptdata', [DataController::class, 'encrypt']);
+Route::get('/home/{userId}/encryptdata', [DataController::class, 'encrypt']);
 
 // decrypt
 Route::get('/decryptdata', [DataController::class, 'decrypt']);

@@ -43,7 +43,7 @@ class AuthController extends Controller
                 print('Email already existed\n');
                 return redirect()->back()->withInput()->withErrors(['email' => 'Email already exists. Please use a different email.']);
             }
-            $aes = new AES('cbc');
+            $aes = new AES();
             $symkey = Str::random(64);
             $aes->setKey($symkey);
 
@@ -51,9 +51,8 @@ class AuthController extends Controller
             $userData->publickey = $publicKey;
             $userData->privatekey = $privateKey;
             $userData->symkey = $symkey;
-            $userData->id = Str::uuid();
             $userData->name = base64_encode($aes->encrypt($request->name));
-            $userData->email = base64_encode($aes->encrypt($request->email));
+            $userData->email = $request->email;
             $userData->phone = base64_encode($aes->encrypt($request->phone));
             $userData->dateofbirth = base64_encode($aes->encrypt($request->dateofbirth));
             $userData->gender = base64_encode($aes->encrypt($request->gender));
@@ -79,7 +78,7 @@ class AuthController extends Controller
                 $request->session()->regenerate();
                 $user = Auth::user();
                 $userId = $user->id;
-                return redirect()->route('user.dashboard', ['userId' => $userId]);
+                return redirect()->route('user.home', ['userId' => $userId]);
             }
             else{
                 return redirect()->back()->withErrors(['login_error' => 'Email and password invalid!']);

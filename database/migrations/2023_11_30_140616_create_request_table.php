@@ -12,14 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('request', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('email_sender');
             $table->string('email_receiver');
             $table->string('status')->nullable();
 
             // add user id foreign key reference to users table
-            $table->uuid('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });

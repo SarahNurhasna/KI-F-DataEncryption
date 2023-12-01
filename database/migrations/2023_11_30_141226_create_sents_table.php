@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sent', function (Blueprint $table) {
-            $table->uuid('sent_id')->primary();
+            $table->id();
             $table->text('symkey');
 
             // add request_id foreign key reference to request table
-            $table->uuid('request_id');
-            $table->foreign('request_id')->references('id')->on('request')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('request_id')->references('id')->on('request')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
