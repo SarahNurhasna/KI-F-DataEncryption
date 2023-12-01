@@ -18,6 +18,14 @@ return new class extends Migration
             $table->string('password');
             $table->text('privatekey');
             $table->text('publickey');
+            $table->text('symkey');
+            $table->string('phone');
+            $table->date('dateofbirth');
+            $table->string('gender');
+            $table->string('address');
+            $table->string('picture')->nullable();
+            $table->string('pdf')->nullable();
+            $table->string('video')->nullable();
             $table->timestamps();
         });
     }

@@ -19,13 +19,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'document',
-        'video',
         'privatekey',
         'publickey',
-        'symkey'
+        'symkey',
+        'phone',
+        'dateofbirth',
+        'gender',
+        'address',
+        'picture',
+        'pdf',
+        'video'
     ];
-
+    
     public function getAuthIdentifierName()
     {
         return 'id';

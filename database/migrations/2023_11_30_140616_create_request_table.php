@@ -21,10 +21,6 @@ return new class extends Migration
             $table->uuid('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
 
-            // add data_user id foreign key reference to data_user table
-            $table->uuid('data_user_id');
-            $table->foreign('data_user_id')->references('id')->on('data_user')->onUpdate('cascade')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

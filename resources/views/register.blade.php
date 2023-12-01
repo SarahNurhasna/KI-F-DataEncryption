@@ -16,7 +16,9 @@
       <div class="form-container">
         <div class="register-form">
           <h2>Register</h2>
-          <form id="register-form">
+          {{-- from --}}
+          <form id="register-form" action="/register" method="POST">
+            @csrf
             <div class="form-group">
               <label for="user">Full Name</label>
               <input type="text" id="user" required/>
@@ -55,6 +57,7 @@
             </div>
             <button id="register-button" class="btn btn-primary btn-rounded" type="submit">Register</button>
           </form>
+
           <p>Already have an account? <a href="login">Login</a></p>
         </div>
       </div>

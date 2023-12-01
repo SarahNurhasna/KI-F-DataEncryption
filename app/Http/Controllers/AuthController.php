@@ -8,15 +8,16 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view('login', [
-            "title" => "Login"
-        ]);
+        return view('login', ["title" => "Login"]);
     }
 
     public function register()
     {
-        return view('register', [
-            "title" => "Register"
-        ]);
+        return view('register', ["title" => "Register"]);
+    }
+
+    public function storeUser()
+    {
+        return request()->all();
     }
 }

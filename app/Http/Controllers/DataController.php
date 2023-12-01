@@ -19,4 +19,9 @@ class DataController extends Controller
             "title" => "Decrypted Data"
         ]);
     }
+
+    public function storeDataUser()
+    {
+       return request()->all();
+    }
 }

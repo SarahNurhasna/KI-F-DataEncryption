@@ -24,9 +24,12 @@ Route::get('/', function () {
 
 // login
 Route::get('/login', [AuthController::class, 'login']);
+// Route::post('/login', [AuthController::class, 'login']);
 
 // register
 Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'storeUser']);
+Route::post('/register', [DataController::class, 'storeDataUser']);
 
 // home
 Route::get('/home', [UserController::class, 'home']);
