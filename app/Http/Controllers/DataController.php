@@ -10,34 +10,33 @@ use phpseclib\Crypt\AES;
 
 class DataController extends Controller
 {
-    public function encrypt($userId, $id)
+    public function encrypt($userId)
     {
-        $latestData = User::where('id', $id)->first();;
-        return view('encryptdata', compact('latest_data'), ["title" => "Encrypted Data"]);
+        $data = User::where('id', $userId)->get();
+        // return view('encryptdata', compact('latest_data'), ["title" => "Encrypted Data"]);
         // return view('encryptdata', ["title" => "Encrypted Data"]);
-        if($latestData){
+        if($data){
             return view('encryptdata', [
-                "title" => "Encrypted Data", 
-                'id' => $id, 
-                'latestData' => $latestData, 
+                "title" => "Encrypted Data",
+                'data' => $data, 
                 'userId' => $userId
             ]);
         }
     }
-
+    
     // public function decrypt()
     // {
     //     return view('decryptdata', ["title" => "Decrypted Data"]);
     // }
 
-    public function decrypt($userId, $id){
-        $latestData = User::where('id', $id)->first();
+    public function decrypt($userId){
+        $latestData = User::where('id', $userId)->first();
         $userId = $latestData->user_id;
         $symkey = $latestData->symkey;
-        $aes = new AES('cbc');
+        $aes = new AES();
         // $aes->setKey($symkey);
         $latestData->name = $aes->decrypt(base64_decode($latestData->name));
-        $latestData->email = $aes->decrypt(base64_decode($latestData->email));
+        $latestData->email = $latestData->email;
         $latestData->phone = $aes->decrypt(base64_decode($latestData->phone));
         $latestData->dateofbirth = $aes->decrypt(base64_decode($latestData->dateofbirth));
         $latestData->gender = $aes->decrypt(base64_decode($latestData->gender));
@@ -46,7 +45,6 @@ class DataController extends Controller
         if($latestData){
             return view('decryptdata', [
                 "title" => "Decrypted Data", 
-                'id' => $id, 
                 'latestData' => $latestData, 
                 'userId' => $userId
             ]);

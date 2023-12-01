@@ -11,6 +11,9 @@
 <body>
     <header>
             <nav class="navbar navbar-expand-lg p-3">
+                {{-- @php
+                $userId = $user->first()->user_id;
+                @endphp --}}
                 <div class="container">
                     <h3 class="navbar-brand" href="home">KI-F15</h1>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,25 +22,26 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="home">Home</a>
+                                <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="{{ route('user.home', ['userId' => $userId]) }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ ($title === "Encrypted Data") ? 'active' : '' }}" aria-current="page" href="encryptdata">Encrypt Data</a>
+                                <a class="nav-link {{ ($title === "Encrypted Data") ? 'active' : '' }}" aria-current="page" href="{{ route('dataencrypt', ['userId' => $userId]) }}">Encrypt Data</a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a class="nav-link {{ ($title === "Decrypted Data") ? 'active' : '' }}" href="{{ route('datadecrypt', ['userId' => $userId]) }}">Decrypt Data</a>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a class="nav-link {{ ($title === 'Request') ? 'active' : '' }}" href="{{ route('request', ['userId' => $userId]) }}">Request</a>
+                                {{-- <a class="nav-link {{ ($title === 'Request') ? 'active' : '' }}" href="request">Request</a> --}}
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ ($title === "Decrypted Data") ? 'active' : '' }}" href="decryptdata">Decrypt Data</a>
+                                <a class="nav-link {{ ($title === 'Sent') ? 'active' : '' }}" href="{{ route('sent', ['userId' => $userId]) }}">Sent</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ ($title === 'Request') ? 'active' : '' }}" href="request">Request</a>
+                                <a class="nav-link {{ ($title === 'Data Requested') ? 'active' : '' }}" href="{{ route('datarequested', ['userId' => $userId]) }}">Data Requested</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ ($title === 'Sent') ? 'active' : '' }}" href="sent">Sent</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ ($title === 'Data Requested') ? 'active' : '' }}" href="datarequested">Data Requested</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ ($title === 'Inbox') ? 'active' : '' }}" href="inbox">Inbox</a>
+                                <a class="nav-link {{ ($title === 'Inbox') ? 'active' : '' }}" href="{{ route('inbox', ['userId' => $userId]) }}">Inbox</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="login">Logout</a>

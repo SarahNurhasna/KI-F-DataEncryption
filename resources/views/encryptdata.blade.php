@@ -3,7 +3,7 @@
 @section('container')
     <h2>Your Encrypted Profile</h2>
     <table class="table table-striped table-hover">
-        @foreach ($latestData as $item)
+        @foreach ($data as $item)
         <tr>
            <td class="table-light">
                 <h4>Name</h4>  

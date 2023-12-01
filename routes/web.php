@@ -30,23 +30,26 @@ Route::post('/login', [AuthController::class, 'login'])->name('user.login');
 Route::get('/register', [AuthController::class, 'showregister']);
 Route::post('/register', [AuthController::class, 'storeUser'])->name('user.register');
 
-// home
-Route::get('/home/{userId}', [UserController::class, 'showhome'])->name('user.home');
+Route::middleware(['auth'])->group(function (){
+    // home
+    Route::get('/home/{userId}', [UserController::class, 'showhome'])->name('user.home');
 
-// encrypt
-Route::get('/home/{userId}/encryptdata', [DataController::class, 'encrypt']);
+    // encrypt
+    Route::get('/encryptdata/{userId}', [DataController::class, 'encrypt'])->name('dataencrypt');
 
-// decrypt
-Route::get('/decryptdata', [DataController::class, 'decrypt']);
+    // decrypt
+    Route::get('/decryptdata/{userId}', [DataController::class, 'decrypt'])->name('datadecrypt');
 
-// request
-Route::get('/request', [RequestController::class, 'request']);
+    // request
+    Route::get('/request/{userId}', [RequestController::class, 'showrequest'])->name('showrequest');
+    Route::post('/request/{userId}', [RequestController::class, 'request'])->name('request');
 
-// data requested
-Route::get('/datarequested', [RequestController::class, 'datarequested']);
+    // data requested
+    Route::get('/datarequested/{userId}', [RequestController::class, 'datarequested'])->name('datarequested');
 
-// sent
-Route::get('/sent', [SentController::class, 'sent']);
+    // sent
+    Route::get('/sent/{userId}', [SentController::class, 'showsent'])->name('sent');
 
-// inbox
-Route::get('/inbox', [UserController::class, 'inbox']);
+    // inbox
+    Route::get('/inbox/{userId}', [UserController::class, 'inbox'])->name('inbox');
+});

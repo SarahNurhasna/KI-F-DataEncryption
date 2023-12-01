@@ -1,10 +1,9 @@
 @extends('main')
 
 @section('container')
-    {{-- @foreach ($user as $user) --}}
-        <h1>Welcome, !</h1>
-    {{-- @endforeach --}}
-            <div class="data-row">
+    {{-- @foreach ($latestData as $item) --}}
+        <h1>Welcome !</h1>
+            {{-- <div class="data-row">
                 <label for="name">Name:</label>
                 <p>name</p>
             </div>
@@ -27,7 +26,8 @@
             <div class="data-row">
                 <label for="email">Email Address:</label>
                 <p>email</p>
-            </div>
+            </div> --}}
+    {{-- @endforeach --}}
     <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         <input type="submit" id="submit-button">

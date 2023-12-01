@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\URL;
 use phpseclib\Crypt\RSA;
 use Illuminate\Support\Str;
 use phpseclib\Crypt\AES;
- 
+use Illuminate\Support\Facades\Crypt;
 
 class AuthController extends Controller
 {
@@ -47,9 +47,11 @@ class AuthController extends Controller
             $symkey = Str::random(64);
             $aes->setKey($symkey);
 
+            $encryptionKey = env('ENCRYPTION_KEY');
+
             $userData = new User();
-            $userData->publickey = $publicKey;
-            $userData->privatekey = $privateKey;
+            $userData->publickey = base64_encode(Crypt::encrypt($publicKey, $encryptionKey));
+            $userData->privatekey = base64_encode(Crypt::encrypt($privateKey, $encryptionKey));
             $userData->symkey = $symkey;
             $userData->name = base64_encode($aes->encrypt($request->name));
             $userData->email = $request->email;
