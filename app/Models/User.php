@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'user';
+    protected $table = 'users';
     protected $primaryKey = 'id';
 
     protected $fillable = [
@@ -30,7 +30,12 @@ class User extends Authenticatable
         'pdf',
         'video'
     ];
-    
+
+    public function requestdata()
+    {
+        return $this->hasMany(RequestData::class);
+    }
+
     public function getAuthIdentifierName()
     {
         return 'id';

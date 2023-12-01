@@ -13,6 +13,15 @@
     
     <div class="data-user">
         <h2>Data User</h2>
+        name	
+        email	
+        phone	
+        dateofbirth	
+        gender	
+        address	
+        picture	
+        pdf	
+        video
     </div>
     
 @endsection

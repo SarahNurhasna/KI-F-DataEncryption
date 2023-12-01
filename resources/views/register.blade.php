@@ -17,23 +17,23 @@
         <div class="register-form">
           <h2>Register</h2>
           {{-- from --}}
-          <form id="register-form" action="/register" method="POST">
+          <form id="register-form" action="{{ route('user.register')}}" method="POST">
             @csrf
             <div class="form-group">
               <label for="user">Full Name</label>
-              <input type="text" id="user" required/>
+              <input type="text" name="name" id="user" required/>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" required placeholder="name@example.com"/>
+              <input type="email" name="email" id="email" required placeholder="name@example.com"/>
             </div>
             <div class="form-group">
               <label for="telp">Phone number</label>
-              <input type="telp" id="telp" required placeholder="example: 087800000003" />
+              <input type="telp" name="phone" id="telp" required placeholder="example: 087800000003" />
             </div>
             <div class="form-group">
               <label for="date">Date of birth</label>
-              <input type="date" id="date" required />
+              <input type="date" name="dob" id="date" required />
             </div>
             <!-- <div class="form-group">
               <label for="age">Age</label>
@@ -43,17 +43,17 @@
               <label for="gender">Gender</label>
               <select class="form-select" aria-label=".form-select-lg">
                 <option selected>Select one</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
+                <option value="1" name="gender">Male</option>
+                <option value="2" name="gender">Female</option>
               </select>
             </div>
             <div class="form-group">
               <label for="address">Address</label>
-              <input type="address" id="address" required />
+              <input type="address" name="address" id="address" required />
             </div>
             <div class="form-group">
               <label for="pass">Password</label>
-              <input type="password" id="pass" required />
+              <input type="password" name="password" id="pass" required />
             </div>
             <button id="register-button" class="btn btn-primary btn-rounded" type="submit">Register</button>
           </form>
@@ -63,12 +63,12 @@
       </div>
     </div>
     <!-- <script src="js/register.js"></script> -->
-    <!-- <script>
+    {{-- <script>
       // Menangani saat tombol login ditekan
       document.getElementById("register-button").addEventListener("click", function (event) {
         // Mengarahkan pengguna ke halaman lain (ganti "dashboard.html" dengan halaman tujuan yang sesuai)
-        window.location.href = "../index.html";
+        window.location.href = "login";
       });
-    </script> -->
+    </script> --}}
   </body>
 </html>

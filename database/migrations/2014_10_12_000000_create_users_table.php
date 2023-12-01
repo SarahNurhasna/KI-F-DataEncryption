@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('publickey');
             $table->text('symkey');
             $table->string('phone');
-            $table->date('dateofbirth');
+            $table->string('dateofbirth');
             $table->string('gender');
             $table->string('address');
             $table->string('picture')->nullable();

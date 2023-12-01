@@ -1,7 +1,9 @@
 @extends('main')
 
 @section('container')
-    <h1>Welcome, !</h1>
+    {{-- @foreach ($user as $user) --}}
+        <h1>Welcome, !</h1>
+    {{-- @endforeach --}}
             <div class="data-row">
                 <label for="name">Name:</label>
                 <p>name</p>

@@ -14,14 +14,16 @@
       <div class="form-container">
         <div class="login-form">
           <h2>Login</h2>
-          <form id="login-form">
+          {{-- form --}}
+          <form id="login-form" action="{{ route('user.login')}}" method="POST">
+            @csrf
             <div class="form-group">
               <label for="user">Email</label>
-              <input type="text" id="user" required placeholder="name@example.com"/>
+              <input type="email" name="email" id="user" required placeholder="name@example.com"/>
             </div>
             <div class="form-group">
               <label for="pass">Password</label>
-              <input type="password" id="pass" required />
+              <input type="password" name="password" id="pass" required />
             </div>
             <button id="login-button" class="btn btn-primary btn-rounded" type="submit">Sign In</button>
           </form>

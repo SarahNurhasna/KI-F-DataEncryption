@@ -23,16 +23,15 @@ Route::get('/', function () {
 });
 
 // login
-Route::get('/login', [AuthController::class, 'login']);
-// Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'showlogin'])->name('user.showlogin');
+Route::post('/login', [AuthController::class, 'login'])->name('user.login');
 
 // register
-Route::get('/register', [AuthController::class, 'register']);
-Route::post('/register', [AuthController::class, 'storeUser']);
-Route::post('/register', [DataController::class, 'storeDataUser']);
+Route::get('/register', [AuthController::class, 'showregister']);
+Route::post('/register', [AuthController::class, 'storeUser'])->name('user.register');
 
 // home
-Route::get('/home', [UserController::class, 'home']);
+Route::get('/home/{userId}', [UserController::class, 'showhome'])->name('user.home');
 
 // encrypt
 Route::get('/encryptdata', [DataController::class, 'encrypt']);
