@@ -1,15 +1,19 @@
-@font-face {
+/* @font-face {
   font-family: 'LoveSong';
   src: url('../font/Mf Love Song.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
     color: #333;
-    background: rgb(255,165,204);
-    background: radial-gradient(circle, rgba(255,165,204,1) 0%, rgba(120,182,255,1) 100%);
-    font-family: 'Raleway', sans-serif !important;
+    background: rgb(255, 165, 204);
+    background: radial-gradient(
+        circle,
+        rgba(255, 165, 204, 1) 0%,
+        rgba(120, 182, 255, 1) 100%
+    );
+    font-family: "Raleway", sans-serif !important;
     justify-content: center;
     display: flex;
     padding: 50px;
@@ -20,7 +24,8 @@ h2 {
     font-size: 5vmin;
     margin: 0 0 30px;
     color: #102339;
-    font-family: 'LoveSong', sans-serif;
+    /* font-family: 'LoveSong', sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -30,7 +35,6 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
 
 .form-container {
@@ -40,7 +44,6 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 50%;
     text-align: center;
-    
 }
 
 .register-form h2 {
@@ -54,13 +57,13 @@ h2 {
     flex-direction: column;
 }
 
-
-.form-select{
+.form-select {
     width: 40% !important;
     border: 1px solid #ccc;
     border-radius: 50px !important;
     display: flex;
-    font-family: 'Raleway', sans-serif !important;
+    /* font-family: "Raleway", sans-serif !important; */
+    font-family: "Poppins", sans-serif;
     font-size: 2vmin !important;
 }
 
@@ -70,7 +73,8 @@ label {
     text-align: left;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-family: 'Raleway', sans-serif !important;
+    /* font-family: "Raleway", sans-serif !important; */
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
@@ -85,16 +89,16 @@ button {
     margin: 20px !important;
     width: 50%; /* Set width to 60% */
     padding: 10px;
-    background: #5c9be3 !important;;
+    background: #5c9be3 !important;
     color: #feffff;
     border: none;
     cursor: pointer;
-    
 }
 
 .btn-rounded {
     border-radius: 50px !important; /* Adjust this value based on your preference */
-    font-family: 'Raleway', sans-serif !important;
+    /* font-family: "Raleway", sans-serif !important; */
+    font-family: "Poppins", sans-serif;
     font-size: 2.3vmin !important;
 }
 
@@ -104,13 +108,13 @@ button:hover {
 
 p {
     margin: 20px 0 0;
-    font-family: 'Raleway', sans-serif !important;
+    font-family: "Poppins", sans-serif;
 }
 
 a {
-    color: #5c9be3 !important;;
+    color: #5c9be3 !important;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif !important;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Media queries untuk tampilan responsif */
